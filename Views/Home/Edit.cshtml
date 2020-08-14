@@ -1,0 +1,31 @@
+@model Dishes
+
+<form class="col-5 mx-auto" action="/update" method="post">
+<input type="hidden" asp-for="DishId" value="@Model.DishId">
+    <div class="form-group">
+        <label asp-for="Chef">Chef's Name</label>
+        <input asp-for="Chef" class="form-control">
+        <span class="text-danger" asp-validation-for="Chef"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Name">Name of Dish</label>
+        <input asp-for="Name" class="form-control">
+        <span class="text-danger" asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Calories"># of Calories</label>
+        <input asp-for="Calories" class="form-control">
+        <span class="text-danger" asp-validation-for="Calories"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Tastiness">Tastiness (1-10)</label>
+        <input asp-for="Tastiness" class="form-control">
+        <span class="text-danger" asp-validation-for="Tastiness"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control">
+        <span class="text-danger" asp-validation-for="Description"></span>
+    </div>
+    <input type="submit" value="Edit Dish" class="btn btn-primary">
+</form>

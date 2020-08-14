@@ -1,0 +1,12 @@
+@model Dishes
+
+<form action="">
+    <input type="hidden" asp-for="DishId" value="@Model.DishId">
+        <label asp-for="Chef">Chef's Name: @Model.Chef</label><br>
+        <label asp-for="Name">Name of Dish: @Model.Name</label><br>
+        <label asp-for="Calories">Calories: @Model.Calories</label><br>
+        <label asp-for="Tastiness">Tastiness: @Model.Tastiness</label><br>
+        <label asp-for="Description">Description: @Model.Description</label><br>
+        <a href="/edit/@Model.DishId" class="btn btn-warning">Edit</a>
+        <a href="/destroy/@Model.DishId" class="btn btn-danger">Delete</a>
+</form>
